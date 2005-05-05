@@ -15,11 +15,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	91d9a77355aa022958ce349ad11d95a7
+BuildRequires:	perl-Encode >= 2.09-1
 BuildRequires:	perl-devel >= 1:5.7.3
 BuildRequires:	rpm-perlprov >= 4.1-13
-BuildRequires:	perl-Encode >= 2.09-1
-%{?with_tests:BuildRequires:  perl(Module::Signature)}
-BuildArch:	noarch
+%{?with_tests:BuildRequires:  perl-Module-Signature}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -43,7 +42,8 @@ dwu postaciach stosuj±c z transliteracjê znak po znaku.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-%{__make}
+%{__make} \
+	OPTIMIZE="%{rpmcflags}"
 
 %{?with_tests:%{__make} test}
 
@@ -59,12 +59,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc Changes
-%dir %{_bindir}
-%dir %{perl_vendorarch}/%{pdir}
-%dir %{perl_vendorarch}/auto/%{pdir}/%{pnam}
-%{perl_vendorarch}/%{pdir}/%{pnam}.pm
-%{perl_vendorarch}/%{pdir}/%{pnam}/*.pm
-%{perl_archlib}/*.pod
-%{_mandir}/man1/*
 %attr(755,root,root) %{_bindir}/*
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pnam}/%{pnam}.so
+%{perl_vendorarch}/Encode/HanConvert.pm
+%dir %{perl_vendorarch}/Encode/HanConvert
+%{perl_vendorarch}/Encode/HanConvert/*.pm
+%dir %{perl_vendorarch}/auto/Encode/HanConvert
+%attr(755,root,root) %{perl_vendorarch}/auto/Encode/HanConvert/HanConvert.so
+%{_mandir}/man1/*
