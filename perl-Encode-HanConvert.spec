@@ -6,7 +6,7 @@
 %define		pdir	Encode
 %define		pnam	HanConvert
 Summary:	Encode::HanConvert - Traditional and Simplified Chinese mappings
-Summary(pl):	Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramów jêzyka chiñskiego
+Summary(pl.UTF-8):   Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramÃ³w jÄ™zyka chiÅ„skiego
 Name:		perl-Encode-HanConvert
 Version:	0.31
 Release:	0.1
@@ -29,12 +29,12 @@ traditional ones, and vice-versa. This module attempts to convert
 Chinese text between the two forms, using character-by-character
 transliteration.
 
-%description -l pl
-W latach 1950-tych rz±d chiñski upro¶ci³ ponad 2000 chiñskich
-ideogramów. Tajwan i Hong Kong nadal u¿ywaj± ideogramów tradycyjnych.
-Ideogramy uproszczone s± nieczytelne dla znaj±cych tylko tradycyjne i
-odwrotnie. Modu³ dokonuje wzajemnej konwersji tekstów chiñskich w tych
-dwu postaciach stosuj±c z transliteracjê znak po znaku.
+%description -l pl.UTF-8
+W latach 1950-tych rzÄ…d chiÅ„ski uproÅ›ciÅ‚ ponad 2000 chiÅ„skich
+ideogramÃ³w. Tajwan i Hong Kong nadal uÅ¼ywajÄ… ideogramÃ³w tradycyjnych.
+Ideogramy uproszczone sÄ… nieczytelne dla znajÄ…cych tylko tradycyjne i
+odwrotnie. ModuÅ‚ dokonuje wzajemnej konwersji tekstÃ³w chiÅ„skich w tych
+dwu postaciach stosujÄ…c z transliteracjÄ™ znak po znaku.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
