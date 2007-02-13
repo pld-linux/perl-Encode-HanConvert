@@ -6,7 +6,7 @@
 %define		pdir	Encode
 %define		pnam	HanConvert
 Summary:	Encode::HanConvert - Traditional and Simplified Chinese mappings
-Summary(pl.UTF-8):   Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramów języka chińskiego
+Summary(pl.UTF-8):	Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramów języka chińskiego
 Name:		perl-Encode-HanConvert
 Version:	0.31
 Release:	0.1
