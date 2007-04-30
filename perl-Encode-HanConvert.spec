@@ -9,13 +9,13 @@ Summary:	Encode::HanConvert - Traditional and Simplified Chinese mappings
 Summary(pl.UTF-8):	Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramów języka chińskiego
 Name:		perl-Encode-HanConvert
 Version:	0.31
-Release:	0.1
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	91d9a77355aa022958ce349ad11d95a7
-BuildRequires:	perl-Encode >= 2.09-1
+BuildRequires:	perl(Encode) >= 2.09
 BuildRequires:	perl-devel >= 1:5.7.3
 BuildRequires:	rpm-perlprov >= 4.1-13
 %{?with_tests:BuildRequires:  perl-Module-Signature}
@@ -32,9 +32,9 @@ transliteration.
 %description -l pl.UTF-8
 W latach 1950-tych rząd chiński uprościł ponad 2000 chińskich
 ideogramów. Tajwan i Hong Kong nadal używają ideogramów tradycyjnych.
-Ideogramy uproszczone są nieczytelne dla znających tylko tradycyjne i
-odwrotnie. Moduł dokonuje wzajemnej konwersji tekstów chińskich w tych
-dwu postaciach stosując z transliterację znak po znaku.
+Ideogramy uproszczone są trudne do odczytania dla znających tylko
+tradycyjne i odwrotnie. Moduł próbuje konwertować teksty chińskie
+pomiędzy tymi postaciami stosując transliterację znak po znaku.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
