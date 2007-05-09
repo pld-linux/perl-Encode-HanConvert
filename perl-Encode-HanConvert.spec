@@ -13,8 +13,9 @@ Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	91d9a77355aa022958ce349ad11d95a7
+URL:		http://search.cpan.org/dist/Encode-HanConvert/
 BuildRequires:	perl(Encode) >= 2.09
 BuildRequires:	perl-devel >= 1:5.7.3
 BuildRequires:	rpm-perlprov >= 4.1-13
