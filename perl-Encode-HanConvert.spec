@@ -8,13 +8,13 @@
 Summary:	Encode::HanConvert - Traditional and Simplified Chinese mappings
 Summary(pl.UTF-8):	Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramów języka chińskiego
 Name:		perl-Encode-HanConvert
-Version:	0.31
+Version:	0.34
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	91d9a77355aa022958ce349ad11d95a7
+# Source0-md5:	b9ca7311ec9ec8d79a6e69c724cb37e3
 URL:		http://search.cpan.org/dist/Encode-HanConvert/
 BuildRequires:	perl(Encode) >= 2.09
 BuildRequires:	perl-devel >= 1:5.7.3
