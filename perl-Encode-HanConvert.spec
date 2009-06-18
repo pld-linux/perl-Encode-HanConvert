@@ -8,18 +8,18 @@
 Summary:	Encode::HanConvert - Traditional and Simplified Chinese mappings
 Summary(pl.UTF-8):	Encode::HanConvert - Mapowanie tradycyjne i uproszczone ideogramów języka chińskiego
 Name:		perl-Encode-HanConvert
-Version:	0.34
-Release:	3
+Version:	0.35
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Encode/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	b9ca7311ec9ec8d79a6e69c724cb37e3
+# Source0-md5:	c36bc77760559080fc6ea9608300b73a
 URL:		http://search.cpan.org/dist/Encode-HanConvert/
 BuildRequires:	perl(Encode) >= 2.09
+%{?with_tests:BuildRequires:  perl-Module-Signature}
 BuildRequires:	perl-devel >= 1:5.7.3
 BuildRequires:	rpm-perlprov >= 4.1-13
-%{?with_tests:BuildRequires:  perl-Module-Signature}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -66,5 +66,6 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/Encode/HanConvert
 %{perl_vendorarch}/Encode/HanConvert/*.pm
 %dir %{perl_vendorarch}/auto/Encode/HanConvert
+%{perl_vendorarch}/auto/Encode/HanConvert/HanConvert.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/HanConvert/HanConvert.so
 %{_mandir}/man1/*
