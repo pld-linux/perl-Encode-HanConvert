@@ -66,6 +66,5 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/Encode/HanConvert
 %{perl_vendorarch}/Encode/HanConvert/*.pm
 %dir %{perl_vendorarch}/auto/Encode/HanConvert
-%{perl_vendorarch}/auto/Encode/HanConvert/HanConvert.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Encode/HanConvert/HanConvert.so
 %{_mandir}/man1/*
